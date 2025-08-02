@@ -18,5 +18,5 @@ I'm also aiming to grow this foundation to reach a **20 LPA+ role within 3 month
 | 2    | Arrays (Easy + Medium)    | STARTED          | 
 | 3    | Recursion + Backtracking  | ⬜ Not Started  | 
 | 4    | Searching & Sorting       | ⬜ Not Started  |                                
-
+| 5    | Queue                     | ⬜ Not Started  |                      
 ---
