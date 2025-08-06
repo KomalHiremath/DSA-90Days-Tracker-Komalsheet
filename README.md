@@ -19,4 +19,4 @@ I'm also aiming to grow this foundation to reach a **12 LPA+ role within 3 month
 | 4    | Searching & Sorting       | ⬜ Not Started  |                                
 | 5    | Queue                     | ⬜ Not Started  |   
                    
----
+
