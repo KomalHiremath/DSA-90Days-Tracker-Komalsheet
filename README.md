@@ -8,7 +8,6 @@ To master DSA in 90 days and crack a software development job with a package of 
 
 I'm also aiming to grow this foundation to reach a **20 LPA+ role within 3 months** through focused practice, interview prep, and consistent upskilling.
 
----
 
 ## 📅 Weekly Progress Tracker
 
