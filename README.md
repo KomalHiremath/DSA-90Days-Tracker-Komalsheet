@@ -4,7 +4,7 @@ Hi! I'm Komal Hiremath, and this repository is dedicated to my 90-day Data Struc
 
 🎯MY GOAL
 
-To master DSA in 90 days and crack a software development job with a package of 4–6 LPA by the end of July 2025.
+To master DSA in 90 days and crack a software development job with a package of 4–6 LPA.
 
 I'm also aiming to grow this foundation to reach a **12 LPA+ role within 3 months** through focused practice, interview prep, and consistent upskilling.
 
