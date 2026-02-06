@@ -37,3 +37,43 @@ else:
             return True
         else:
             return False
+
+# 6. Take two numbers and print the larger one.  Your task is to print 1 if a < b, print 2 if a > b and print 3 if a = b. 
+    def check(self, a,b):
+        if a < b:
+            return 1
+        elif a > b:
+            return 2
+        else:
+            return 3
+
+# 7. Take three numbers and print the largest. 
+    def greatestOfThree(self, a, b, c):
+        if a >= b and a >= c:
+            return a
+        elif b >= a and b >= c:
+            return b
+        else:
+            return c
+        
+# 8. Take a temperature value and print “Cold”, “Warm”, or “Hot” using range conditions.
+    def convertTemperature(self, celsius: float) -> List[float]:
+        kelvin = celsius + 273.15 
+        fahrenheit = celsius * 1.80 + 32.00
+        ans = [kelvin, fahrenheit]
+        return ans   
+
+# 9. Take a character and check if it’s a vowel or consonant./ Write a program to check whether a character is a vowel or not. 
+    def isVowel (ob,c):
+        vow = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+        if c in vow:
+            
+            return "YES"
+        
+        else:
+            return "NO"
+# 10. Take a character and check whether it’s uppercase, lowercase, a digit, or a special character. 
+string(str)
+upper= ['A-z']
+lower = ['a-z']
+digit = [0-9, '@', '$', '*']
