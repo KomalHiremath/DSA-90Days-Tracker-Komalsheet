@@ -23,3 +23,17 @@ def divisibleBy5 (ob,N):
         else:
             return 0
      
+# 4 Check if a number is divisible by both 3 and 5. 
+num = int(input("ENter:"))
+if num%5 == 0 and num%3 ==0:
+    print("1") 
+else:
+    print("0")
+
+# 5 You are given an Integer n. Return true if It is a Leap Year otherwise return false
+
+    def checkYear (self, n):
+        if n%4 ==0 and n%100 !=0 or n%400 == 0:
+            return True
+        else:
+            return False
