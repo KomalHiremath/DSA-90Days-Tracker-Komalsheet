@@ -73,7 +73,12 @@ else:
         else:
             return "NO"
 # 10. Take a character and check whether it’s uppercase, lowercase, a digit, or a special character. 
-string(str)
-upper= ['A-z']
-lower = ['a-z']
-digit = [0-9, '@', '$', '*']
+ch = input("enter a char:")
+if ch.isupper():
+    print("is upper char")
+elif ch.islower():
+    print("is lower char")
+elif ch.isdigit():
+    print("is digit")
+else:
+    print("is special char")
