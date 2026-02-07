@@ -37,7 +37,13 @@ elif 81<= mark <=100:
 else:
     print("invalid")
     
-# 4. Check if one of two given numbers is a multiple of the other.
+# 4. Check if one of two given numbers is a multiple of the other
+a , b  = map(int, input("enter the numbers: ").split())
+if ( b!= 0 and a%b == 0) or (a != 0 and b%a == 0):
+    print("Yes multiple")
+
+else:
+    print("Not")
 # 5. Take the hour of the day (0–23) and print “Good Morning”, “Good Afternoon”, “Good Evening”, or “Good Night”
 hr = int(input("Enter the hour: ")) 
 if 5 <= hr <= 11:
@@ -70,4 +76,26 @@ elif a % 2 == 0 and  b % 2 != 0:
     print("a  is even and b is odd")
 else:
     print("b  is even and a is odd")
+
+# 9. Take a day number (1–7) and print the corresponding day name. 
+import calendar
+n = input("Enter the number between 1-7: ")
+if 1<=n<=7:
+    print(calendar.day_name[n-1])
+else:
+    print("Invalid num")
     
+        #### OR ######
+
+days = ["monday", "tuesday", "wednesday", "thursday", "Friday", "Saturday", "Sunday"]
+print(days[n-1])
+
+# 10. Take a month number (1–12) and print the number of days in that month (ignore leap years).
+# Given a date, return the corresponding day of the week for that date.
+import calendar
+
+class Solution:
+    def getDayOfWeek(self, d, m, y):
+        day_index = calendar.weekday(y, m, d)
+        days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        return days[day_index]

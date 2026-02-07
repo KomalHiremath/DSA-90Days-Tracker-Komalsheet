@@ -92,4 +92,3 @@ elif 'n' <= ch <= 'z':
     print("ch is between n - z")
 else:
     print("Invalid")
-    
