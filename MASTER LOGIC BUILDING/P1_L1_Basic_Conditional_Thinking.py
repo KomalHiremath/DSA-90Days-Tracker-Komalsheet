@@ -82,3 +82,14 @@ elif ch.isdigit():
     print("is digit")
 else:
     print("is special char")
+    
+# 8. Take an alphabet character and check if it lies between ‘a’ and ‘m’ or ‘n’ and ‘z’.
+ch = input("Enter the char: ") 
+
+if 'a' <= ch <= 'm':
+    print("ch is between a - m")
+elif 'n' <= ch <= 'z':
+    print("ch is between n - z")
+else:
+    print("Invalid")
+    
