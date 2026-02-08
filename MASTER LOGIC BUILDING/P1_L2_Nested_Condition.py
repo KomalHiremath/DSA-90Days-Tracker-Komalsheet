@@ -79,8 +79,8 @@ else:
 
 # 9. Take a day number (1–7) and print the corresponding day name. 
 import calendar
-n = input("Enter the number between 1-7: ")
-if 1<=n<=7:
+n = int(input("Enter number (1-7): "))
+if 1<= n <=7:
     print(calendar.day_name[n-1])
 else:
     print("Invalid num")
