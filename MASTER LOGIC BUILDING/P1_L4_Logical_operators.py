@@ -25,5 +25,14 @@ class Solution:
 #✅ Create empty list
 # ✅ Loop
 # ✅ Append inside loop
-# ❌ Never return inside loop     
+# ❌ Never return inside loop  
+
+# 3. Take three numbers and print the median value (neither maximum nor minimum). 
+num = list(map(int, input("Enter the number: ").split()))
+if len(num) == 3:
+    num.sort()
+    print("The median val is: ", num[1])
+else:
+    print("none")
+   
  
