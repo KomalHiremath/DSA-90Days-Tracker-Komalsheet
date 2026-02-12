@@ -35,4 +35,14 @@ if len(num) == 3:
 else:
     print("none")
    
- 
+# 4. Take 24-hour time (hours and minutes) and print whether it is AM or PM. 
+hour= int(input("ENter the hour(0-23): "))
+min = int(input("enter the minutes (0-59)"))
+
+if 0 <= hour <=23 and 0<=min<=59:
+    if hour <12:
+        print("Its AM")
+    else:
+        print("Its PM")
+else:
+    print("Invalid input")
