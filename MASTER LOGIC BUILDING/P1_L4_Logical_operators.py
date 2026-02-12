@@ -46,3 +46,37 @@ if 0 <= hour <=23 and 0<=min<=59:
         print("Its PM")
 else:
     print("Invalid input")
+
+#5. Take income and age, and check if eligible for tax (age > 18 and income > 5 L). 
+income = int(input("Enter the income: "))
+age = int(input("Enter the age: "))
+if age > 18 and income > 500000:
+    print("Eligible")
+else:
+    print("Not eligible") 
+    
+# 6. Take two numbers and check if both are positive and their sum is less than 100.
+a = int(input("Enter the num: "))
+b = int(input("Enter the num: "))
+
+if (a > 0 or b > 0) and a+b < 100:
+    print("positive")
+else:
+    print("Not satisfied")
+  
+
+# and  → higher precedence
+# # or   → lower precedence
+
+# a > 0 or b > 0 and a + b < 100
+# Python reads it as: a > 0 or (b > 0 and a + b < 100)
+ 
+# (a > 0 or b > 0) and a + b < 100
+# Here parentheses force:
+# Check first (a > 0 or b > 0) 
+# Then check and a + b < 100
+
+
+
+
+    
