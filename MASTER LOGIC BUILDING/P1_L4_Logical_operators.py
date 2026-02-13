@@ -76,7 +76,44 @@ else:
 # Check first (a > 0 or b > 0) 
 # Then check and a + b < 100
 
+# 7. Take a single digit (0–9) and print its word form (“Zero” to “Nine”). 
+num = int(input("enter the digit: "))
+word = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+if 0 <=num<=9:
+    print(word[num])
+else:
+    print("Invalid")
 
+# 7: Roman to integer
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        val = {'I': 1, 'V': 5,'X':10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        total = 0
+        for i in range(len(s)):
+            if i < len(s)-1 and val[s[i]] < val[s[i+1]]:
+                total -= val[s[i]]
+            else:
+                total += val[s[i]]
+        return total
 
-
+# 8. Take a weekday number (1–7) and determine if it is a weekday or weekend. 
+w = int(input("enter teh weekday num: "))
+if 1 <= w <=5:
+    print("its weekday")
+elif 5< w <= 7:
+    print("Its weekend!!..")
+else:
+    print("Invalid")
     
+# 9. Take electricity units consumed and calculate the bill as per slabs (using if-else). 
+# 10. Take a password string and check basic rules (length ≥ 8 and contains at least one digit).
+word = input("enter the password: ")
+if (len(word) >= 8 and 
+    any(ch.isdigit() for ch in word) and
+    any(ch.islower() for ch in word) and
+    any(ch.isupper() for ch in word) and
+    any(not ch.isalnum for ch in word) ): # or any(ch in string.punctuation) -> Only these exact symbols
+                                          # ch.isalnum() → True for letters + digits
+    print("valid")
+else:
+    print("invalid")
