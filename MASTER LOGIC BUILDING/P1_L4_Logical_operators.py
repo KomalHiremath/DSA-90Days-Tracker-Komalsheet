@@ -105,18 +105,28 @@ elif 5< w <= 7:
 else:
     print("Invalid")
     
-# 9. Take electricity units consumed and calculate the bill as per slabs (using if-else). 
-# 10. Take a password string and check basic rules (length ≥ 8 and contains at least one digit, one lowercase letter, one uppercase letter, one special character does not contain 2 of the same character in adjacent positions (i.e., "aab" violates this condition, but "aba" does not).).
+# 9. Take electricity units consumed and calculate the bill as per slabs (using if-else).
+unit = int(input("enter the units: "))  
+if unit<=100:
+    bill = unit*5
+elif unit <= 200:
+    bill = (100*5) + ((unit -100)*7)
+else:
+    bill = (100*5) + (100*7) + ((unit - 200)* 10)
+print("the bill is:", bill)
+
+ 
+# 10. Take a password string and check basic rules (length ≥ 8 and contains at least one digit, one lowercase letter, one uppercase letter, one special character does not contain 2 of the same character in adjacent positions (i.e., "aab" violates this condition, but "aba" does not).)
 word = input("enter the password: ")
 if (len(word) >= 8 and 
     any(ch.isdigit() for ch in word) and
     any(ch.islower() for ch in word) and
     any(ch.isupper() for ch in word) and
-    any(not ch.isalnum for ch in word) and
+    any(not ch.isalnum for ch in word) and  #  any(ch in string.punctuation) -> Only these exact symbols
     all(word[i]!=word[i+1] for i in range(len(word)-1))
     ):
     print("valid")
 else:
     print("invalid")
- # or any(ch in string.punctuation) -> Only these exact symbols
-                                          # ch.isalnum() → True for letters + digits
+# ch.isalnum() → True for letters + digits
+
