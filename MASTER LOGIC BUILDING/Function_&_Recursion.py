@@ -6,4 +6,7 @@ def cal_avg(a, b, c):
     print(avg)
 cal_avg(111, 278, 3567)
 
-    
+def prod(a=1,b):
+    print(a*b)
+    return a *b   
+prod(8)
