@@ -14,77 +14,94 @@
 #             r -=1
 #         return "".join(S)
     
-# ------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
-# ------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
+# # ------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
+# # ------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
 
-# def prime(num):
-#     if num<=1:
-#         return False
+# # def prime(num):
+# #     if num<=1:
+# #         return False
     
-#     for i in range(2, int(num**0.5)+1):
-#         if num%i == 0:
-#             return False
-#     return True
+# #     for i in range(2, int(num**0.5)+1):
+# #         if num%i == 0:
+# #             return False
+# #     return True
     
-# num = int(input("Enter the num: ")) 
-# print(prime(num))  
+# # num = int(input("Enter the num: ")) 
+# # print(prime(num))  
 
-# ---- 2. COUNT DIGITS ----------
+# # ---- 2. COUNT DIGITS ----------
 
-def count(n):
-    return(len(str(abs(n))))
+# def count(n):
+#     return(len(str(abs(n))))
 
-#     n = abs(n) 
-#     if n == 0:
-#         return 1
+# #     n = abs(n) 
+# #     if n == 0:
+# #         return 1
+# #     count = 0
+# #     while n > 0:
+# #         count +=1
+# #         n = n//10
+# #     return count
+
+# n = int(input("Enter the num: ")) 
+# print(count(n))
+
+# # --- 2. COUNT THE NUMBER OF DIGITS IN N THAT DIVIDE N EVENLY ------
+
+# # Input: n = 2446 Output: 1
+# # Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
+
+# # Input: n = 23  Output: 0
+# # Explanation: 2 and 3, none of them divide 23 evenly.
+
+# # Input: n = 12 Output: 2
+# # Explanation: 1, 2 when both divide 12 leaves remainder 0.
+
+
+# def evenlyDivides(self, n):
+#     original = abs(n)
 #     count = 0
+    
 #     while n > 0:
-#         count +=1
-#         n = n//10
+#         digit = n % 10
+        
+#         if digit != 0 and original % digit == 0:
+#             count += 1
+        
+#         n //= 10
+    
 #     return count
 
-n = int(input("Enter the num: ")) 
-print(count(n))
-
-# --- 2. COUNT THE NUMBER OF DIGITS IN N THAT DIVIDE N EVENLY ------
-
-# Input: n = 2446 Output: 1
-# Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
-
-# Input: n = 23  Output: 0
-# Explanation: 2 and 3, none of them divide 23 evenly.
-
-# Input: n = 12 Output: 2
-# Explanation: 1, 2 when both divide 12 leaves remainder 0.
-
-
-
-def evenlyDivides(self, n):
-    original = abs(n)
-    count = 0
-    
-    while n > 0:
-        digit = n % 10
-        
-        if digit != 0 and original % digit == 0:
-            count += 1
-        
-        n //= 10
-    
-    return count
-
-# --- 1. REVERSE NUMBER ----
-def reverseDigits(self, n):
-    rev = 0
+# # --- 1. REVERSE NUMBER ----
+# def reverseDigits(self, n):
+#     rev = 0
        
-    while n > 0:
-        digit = n % 10
-        rev = rev * 10 + digit
-        n = n // 10
-    
-    return rev
+#     while n > 0:
+#         digit = n % 10
+#         rev = rev * 10 + digit
+#         n = n // 10
+
+#     return rev
 
 # --- 2. PALINDROME NUMBER ----
+def pal(n):
+    rev = 0
+    original = n
+    
+    while n > 0:
+        digit = n % 10
+        rev = rev*10 + digit
+        n = n//10
+    return rev == original
+n = int(input("enter the num: "))
+if pal(n):
+    print("true")
+else:
+    print("False")
+        
+        
+    
+
 # --- 3. SUM OF DIGITS ----
 # --- 4. GCD (EUCLIDEAN METHOD) ----
 # --- 5. LCM ----
