@@ -52,15 +52,15 @@ else:
         fact = fact*i
     print(fact)
     
-def factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n-1)
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     return n * factorial(n-1)
      
-n = int(input("Enter the num: "))
-print(factorial(n))
+# n = int(input("Enter the num: "))
+# print(factorial(n))
 
-10. Print the product of digits of a given number.
+# 10. Print the product of digits of a given number.
 n = input("Enter the num: ")
 if n == 0:
     print(0)
