@@ -175,28 +175,90 @@
 #     if n <= 1: return n
 #     return fib(n-2) +fib(n-1)
 
-# --- 7. SUM OF FIBONACCI  (Recursion)----
-def fib(n):
-    if n <=1:
-        return n
-    return fib(n-1)+fib(n-2)
-def sum_fib(n):
-    if n == 0:
-        return 0
-    return fib(n) + sum_fib(n-1)
-n = int(input("Enter the num: "))
-print(sum_fib(n))
+# # --- 7. SUM OF FIBONACCI  (Recursion)----
+# def fib(n):
+#     if n <=1:
+#         return n
+#     return fib(n-1)+fib(n-2)
+# def sum_fib(n):
+#     if n == 0:
+#         return 0
+#     return fib(n) + sum_fib(n-1)
+# n = int(input("Enter the num: "))
+# print(sum_fib(n))
  
 
-# --- 8. PRINT PRIMES IN RANGE ----
-# --- 9. PRINT FACTORS ----
-# --- 10. PERFECT NUMBER ----
-# --- 11. ARMSTRONG NUMBER ----
+# # --- 8. PRINT PRIMES IN RANGE ----
+# def prime(start, end):
+#     primes = []
+#     for num in range(start, end+1):
+#         if num > 1:
+#             for i in range(2, int(num**0.5)+1):
+#                 if num% i == 0:
+#                     break
+#             else:
+#                 primes.append(num)
+#     return primes
+            
+                    
+# print(prime(10, 20))
 
+# --- 9. PRINT FACTORS ----
+# --- 10. PERFECT NUMBER ---
+# # --- 11. ARMSTRONG NUMBER ----
+# def arm(n):
+#     original = n
+#     total = 0
+#     power = len(str(n))
+#     while n > 0:
+#         dig = n % 10
+#         total += dig**power
+#         n = n// 10
+#     return total == original
+# print(arm(15))
+
+# --13. MISSING ELEMENT IN ARRAY -- 
+# def miss(arr):
+#     n = len(arr) + 1
+    
+#     xor_all = 0
+#     xor_given = 0
+    
+#     # XOR of all 1 to n
+#     for i in range(1, n+1):
+#         xor_all = xor_all ^ i
+        
+#     # XOR of missing elem in arr
+#     for num in arr:
+#         xor_given = xor_given ^ num
+#     return xor_all ^ xor_given
+# print(miss([1, 2,3,5]))
+
+def miss(arr):
+    n = len(arr)+1
+    ori = n * (n+1) // 2
+    missing = sum(arr)
+    return ori - missing
+print(miss([1,2,3,5]))
+
+        
+    
 # --- 12. TWO SUM (O(N) HASHMAP) ----
 # --- 13. FREQUENCY COUNT USING DICTIONARY ----
 # --- 14. TOP K FREQUENT (BASIC VERSION) ----
 # --- 15. SUB ARRAY SUM = K (PREFIX SUM IDEA) ----
+
+# --- 10. Count num of vowels ----
+# vowels = ['a', 'e', 'i', 'o', 'u']
+# word = input("Enter any word: ")
+# count = 0
+# for i in range(len(word)):
+#     if word[i] in vowels:
+#         count += 1
+# if count == 0:
+#     print("no vowels")
+# else:
+#     print("Num of vowels:", count)
 
 # --- 16. STRING PALINDROME ----
 # --- 17. REVERSE WORDS ----
