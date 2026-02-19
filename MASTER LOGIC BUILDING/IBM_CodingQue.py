@@ -81,32 +81,113 @@
 #         rev = rev * 10 + digit
 #         n = n // 10
 
-#     return rev
+# #     return rev
 
-# --- 2. PALINDROME NUMBER ----
-def pal(n):
-    rev = 0
-    original = n
+# # --- 2. PALINDROME NUMBER ----
+# def pal(n):
+#     rev = 0
+#     original = n
     
-    while n > 0:
-        digit = n % 10
-        rev = rev*10 + digit
-        n = n//10
-    return rev == original
-n = int(input("enter the num: "))
-if pal(n):
-    print("true")
-else:
-    print("False")
+#     while n > 0:
+#         digit = n % 10
+#         rev = rev*10 + digit
+#         n = n//10
+#     return rev == original
+# n = int(input("enter the num: "))
+# if pal(n):
+#     print("true")
+# else:
+#     print("False")
         
-        
-    
+#  # --- 2. PALINDROME STRING ----       
+# def pal(s):
+#     return(s[::-1]) == s
+# s =input("ENter the string: ")
+# print(pal(s))
 
-# --- 3. SUM OF DIGITS ----
-# --- 4. GCD (EUCLIDEAN METHOD) ----
-# --- 5. LCM ----
-# --- 6. FIBONACCI (LOOP VERSION) ----
-# --- 7. SUM OF FIBONACCI ----
+# # --- 3. SUM OF DIGITS ----
+# def num(n):
+#     if n == 0:
+#         return 0
+#     last = n % 10
+#     rem = n // 10
+#     return last + num(rem)
+    
+# n = int(input("NUm : "))
+# print(num(n))
+
+# # --- 4. GCD (EUCLIDEAN METHOD) ----
+# def gcd(a,b):
+#     while b!= 0:
+#         a, b = b , a%b
+#     return a
+# a = int(input("NUm : "))
+# b = int(input("NUm : "))
+# print(gcd(a, b))
+
+###### OR ###########
+
+# import math
+# a = int(input("Num : "))
+# b = int(input("NUm : "))
+# print(math.gcd(a,b))
+
+#  # --- 5. LCM ----
+# def gcd(a,b):
+#     while b!= 0:
+#         a, b = b , a%b
+#     return a
+# def lcm(a,b):
+#     return (a*b) // gcd(a,b)
+# a = int(input("Num : "))
+# b = int(input("NUm : "))
+# print(lcm(a,b))
+ 
+# # --- 6. FIBONACCI (LOOP VERSION) ---
+
+# n = int(input("NUm : "))
+# a = 0
+# b = 1
+# c = 0
+# for i in range( n):
+#     print(c)
+#     a = b
+#     b =c
+#     c = a+b
+
+# # --- 7. SUM OF FIBONACCI (LOOP VERSION)  ----
+# n = int(input("Num: "))
+# a = 0 
+# b = 1
+# c = 0
+# total = 0
+# for i in range(n):
+#     print(c)
+#     total +=c
+    
+#     a = b 
+#     b = c 
+#     c = a+b 
+# print("sum: ", total)
+
+# # --- 6. FIBONACCI (Recursion)------------
+# def fib(n):
+#     if n <= 1: return n
+#     return fib(n-2) +fib(n-1)
+
+# --- 7. SUM OF FIBONACCI  (Recursion)----
+def fib(n):
+    if n <=1:
+        return n
+    return fib(n-1)+fib(n-2)
+def sum_fib(n):
+    if n == 0:
+        return 0
+    return fib(n) + sum_fib(n-1)
+n = int(input("Enter the num: "))
+print(sum_fib(n))
+ 
+
 # --- 8. PRINT PRIMES IN RANGE ----
 # --- 9. PRINT FACTORS ----
 # --- 10. PERFECT NUMBER ----
@@ -115,10 +196,9 @@ else:
 # --- 12. TWO SUM (O(N) HASHMAP) ----
 # --- 13. FREQUENCY COUNT USING DICTIONARY ----
 # --- 14. TOP K FREQUENT (BASIC VERSION) ----
-
-# --- 15. SUBARRAY SUM = K (PREFIX SUM IDEA) ----
+# --- 15. SUB ARRAY SUM = K (PREFIX SUM IDEA) ----
 
 # --- 16. STRING PALINDROME ----
 # --- 17. REVERSE WORDS ----
 # --- 18. CHARACTER FREQUENCY ----
-# --- 19. BASIC SLIDING WINDOW (MAX SUM SUBARRAY) ----
+# --- 19. BASIC SLIDING WINDOW (MAX SUM SUB ARRAY) ----

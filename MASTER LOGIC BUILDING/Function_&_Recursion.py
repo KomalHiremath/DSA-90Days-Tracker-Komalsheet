@@ -21,7 +21,7 @@ def show(n):
     show(n-1) # Recursive call  
 show(5) # 5 4 3 2 1
 
-
+## factorial#############
 def fact(n):
     if n==0 or n==1:
         return 1
