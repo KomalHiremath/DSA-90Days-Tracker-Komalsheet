@@ -297,9 +297,7 @@ def singleNonDuplicate(self, nums):
     for elem in freq:
         if freq[elem] == 1:
             return elem
-# --- 14. TOP K FREQUENT (BASIC VERSION) ----
-# --- 15. SUB ARRAY SUM = K (PREFIX SUM IDEA) ----
-
+        
 # --- 10. Count num of vowels ----
 # vowels = ['a', 'e', 'i', 'o', 'u']
 # word = input("Enter any word: ")
@@ -312,7 +310,82 @@ def singleNonDuplicate(self, nums):
 # else:
 #     print("Num of vowels:", count)
 
-# --- 16. STRING PALINDROME ----
-# --- 17. REVERSE WORDS ----
-# --- 18. CHARACTER FREQUENCY ----
-# --- 19. BASIC SLIDING WINDOW (MAX SUM SUB ARRAY) ----
+# =========================
+# HASHMAP (FREQUENCY PATTERN)
+# =========================
+
+# --- 14. TOP K FREQUENT (BASIC VERSION) ---
+def topk(nums):
+    freq = {}
+    for elem in nums:
+    # count freq of each elem
+        if elem in freq:
+            freq[elem] +=1
+        else:
+            freq[elem] = 1
+            
+        result = []
+        for i in range(k): 
+            max_freq = 0
+            max_num = 0
+            for elem in freq:
+                if freq[elem] > max_freq:
+                    max_freq=freq[elem]
+                    max_elem=elem
+            result.append(max_elem)
+        
+        del freq[max_elem]
+    return result
+    
+# --- 15. FIRST NON-REPEATING CHARACTER ---
+# --- 16. CHARACTER FREQUENCY ---
+# --- 17. SUB ARRAY SUM EQUALS K ---
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        pre_freq= {0:1}
+        run_sum = 0
+        result = 0
+
+        for elem in nums:
+            run_sum += elem
+            prev = run_sum - k
+
+            if prev in pre_freq:
+                result = result+pre_freq[prev]
+
+            if run_sum in pre_freq:
+                pre_freq[run_sum] +=1
+            else:
+                pre_freq[run_sum] = 1
+        return result
+
+
+# =========================
+# TWO POINTER PATTERN
+# =========================
+
+# --- 18. STRING PALINDROME ---
+# --- 19. REVERSE WORDS IN A STRING ---
+
+
+# =========================
+# SLIDING WINDOW (FIXED SIZE)
+# =========================
+
+# --- 20. MAXIMUM SUB ARRAY OF SIZE K ---
+# --- 21. BASIC SLIDING WINDOW (MAX SUM SUB ARRAY) ---
+
+
+# =========================
+# SLIDING WINDOW (VARIABLE SIZE)
+# =========================
+
+# --- 22. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS ---
+# --- 23. SMALLEST SUBARRAY >= TARGET ---
+
+
+# =========================
+# KADANE / GREEDY PATTERN
+# =========================
+
+# --- 24. MAXIMUM SUB ARRAY ---
+# --- 25. BEST TIME TO BUY AND SELL STOCK ---
