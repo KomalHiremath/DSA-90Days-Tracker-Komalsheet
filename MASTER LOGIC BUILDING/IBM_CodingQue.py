@@ -244,7 +244,59 @@ print(miss([1,2,3,5]))
         
     
 # --- 12. TWO SUM (O(N) HASHMAP) ----
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash = {}
+        for key in range(len(nums)):
+            val = target - nums[key]
+
+            if val in hash:
+                return [hash[val], key]
+            hash[nums[key]] = key
+            
+### brute force
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i,j]
+
+  
+# --- 13. FREQUENCY COUNT  ----
+def findFrequency(self, arr, x):
+    t = tuple(arr)
+    return t.count(x)
+
 # --- 13. FREQUENCY COUNT USING DICTIONARY ----
+def findFrequency(self, arr, x):
+    freq = {}
+    for elem in arr:
+        if elem in freq:
+            freq[elem] += 1 # {3:2}
+        else:                   # or
+            freq[elem] = 1 # {3:1}
+                
+        # if x in freq:
+        #     return freq[x]
+        # else:
+        #     return 0
+        
+    # or
+        return freq.get(x,0)
+ 
+### ----  LC 540. SINGLE ELEMENT IN A SORTED ARRAY ------------
+    
+def singleNonDuplicate(self, nums):
+    freq = {}
+
+    for elem in nums:
+        if elem in freq:
+            freq[elem] += 1
+        else:
+            freq[elem] = 1
+
+    for elem in freq:
+        if freq[elem] == 1:
+            return elem
 # --- 14. TOP K FREQUENT (BASIC VERSION) ----
 # --- 15. SUB ARRAY SUM = K (PREFIX SUM IDEA) ----
 
