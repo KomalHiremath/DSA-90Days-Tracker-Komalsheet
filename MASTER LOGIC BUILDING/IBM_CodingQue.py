@@ -414,16 +414,69 @@ class Solution:
 # =========================
 
 # --- 20. MAXIMUM SUB ARRAY OF SIZE K ---
-# --- 21. BASIC SLIDING WINDOW (MAX SUM SUB ARRAY) ---
 
 
+# --- 21. MAX Average SUB ARRAY ---
+class Solution:
+    def findMaxAverage(self, arr, n, k):
+        curr = sum(arr[:k])
+        max_sum = curr ## gives max sum among all sub arraay
+        start_index = 0 # gives max sum sub array
+
+        for i in range(1, n - k + 1):
+            curr = curr - arr[i - 1] + arr[i + k - 1]
+
+            if curr > max_sum:
+                max_sum = curr
+                start_index = i
+
+        return start_index
 
 # =========================
 # SLIDING WINDOW (VARIABLE SIZE)
 # =========================
 
 # --- 22. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS ---
-# --- 23. SMALLEST SUBARRAY >= TARGET ---
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        freq = {}
+        left = 0 # index
+        max_len = 0
+
+        for right in range(len(s)):
+            ch = s[right]
+            if ch in freq:
+                freq[ch] +=1
+            else:
+                freq[ch] =1
+
+            while freq[ch] >1:
+                left_char=s[left]
+                freq[left_char] -=1
+                left +=1
+            max_len = max(max_len, right - left +1)
+        return max_len
+
+
+# --- 23. SMALLEST SUB ARRAY >= TARGET ---
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        left = 0
+        curr_sum = 0
+        min_len = float("inf")
+
+        for right in range(len(nums)):
+            curr_sum += nums[right]
+
+            while curr_sum >= target:
+                min_len = min(min_len, right - left + 1)
+                curr_sum -= nums[left]
+                left += 1
+
+        if min_len == float("inf"):
+            return 0
+        else:
+            return min_len
 
 
 # =========================
