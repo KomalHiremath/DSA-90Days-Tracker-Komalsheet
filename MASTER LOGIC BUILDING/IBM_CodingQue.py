@@ -338,7 +338,35 @@ def topk(nums):
     return result
     
 # --- 15. FIRST NON-REPEATING CHARACTER ---
+class Solution:
+    def nonRepeatingChar(self,s):
+        freq = {}
+        
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
+            
+        for ch in s:
+            if freq[ch] == 1:
+                return ch 
+        else:
+            return "$"
+                
 # --- 16. CHARACTER FREQUENCY ---
+class Solution:
+    def charFrequency(self, s: str):
+        freq = {}
+
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
+
+        return freq
+    
 # --- 17. SUB ARRAY SUM EQUALS K ---
     def subarraySum(self, nums: List[int], k: int) -> int:
         pre_freq= {0:1}
@@ -364,7 +392,21 @@ def topk(nums):
 # =========================
 
 # --- 18. STRING PALINDROME ---
+class Solution:
+    def isPalindrome(self, s):
+        return s[::-1] == s
+    
 # --- 19. REVERSE WORDS IN A STRING ---
+class Solution:
+    def reverseWords(self, s):
+        words = s.split(".")
+        
+        clean = []
+        for w in words:
+            if w!="":
+                clean.append(w)
+        clean.reverse()
+        return ".".join(clean)
 
 
 # =========================
@@ -373,6 +415,7 @@ def topk(nums):
 
 # --- 20. MAXIMUM SUB ARRAY OF SIZE K ---
 # --- 21. BASIC SLIDING WINDOW (MAX SUM SUB ARRAY) ---
+
 
 
 # =========================
