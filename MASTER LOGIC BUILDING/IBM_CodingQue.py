@@ -170,374 +170,374 @@
 # #     c = a+b 
 # # print("sum: ", total)
 
-# # # --- 6. FIBONACCI (Recursion)------------
-# # def fib(n):
-# #     if n <= 1: return n
-# #     return fib(n-2) +fib(n-1)
+# # --- 6. FIBONACCI (Recursion)------------
+# def fib(n):
+#     if n <= 1: return n
+#     return fib(n-2) +fib(n-1)
 
-# # # --- 7. SUM OF FIBONACCI  (Recursion)----
-# # def fib(n):
-# #     if n <=1:
-# #         return n
-# #     return fib(n-1)+fib(n-2)
-# # def sum_fib(n):
-# #     if n == 0:
-# #         return 0
-# #     return fib(n) + sum_fib(n-1)
-# # n = int(input("Enter the num: "))
-# # print(sum_fib(n))
+# # --- 7. SUM OF FIBONACCI  (Recursion)----
+# def fib(n):
+#     if n <=1:
+#         return n
+#     return fib(n-1)+fib(n-2)
+# def sum_fib(n):
+#     if n == 0:
+#         return 0
+#     return fib(n) + sum_fib(n-1)
+# n = int(input("Enter the num: "))
+# print(sum_fib(n))
  
 
-# # # --- 8. PRINT PRIMES IN RANGE ----
-# # def prime(start, end):
-# #     primes = []
-# #     for num in range(start, end+1):
-# #         if num > 1:
-# #             for i in range(2, int(num**0.5)+1):
-# #                 if num% i == 0:
-# #                     break
-# #             else:
-# #                 primes.append(num)
-# #     return primes
+# # --- 8. PRINT PRIMES IN RANGE ----
+# def prime(start, end):
+#     primes = []
+#     for num in range(start, end+1):
+#         if num > 1:
+#             for i in range(2, int(num**0.5)+1):
+#                 if num% i == 0:
+#                     break
+#             else:
+#                 primes.append(num)
+#     return primes
             
                     
-# # print(prime(10, 20))
+# print(prime(10, 20))
 
-# # --- 9. PRINT FACTORS ----
-# # --- 10. PERFECT NUMBER ---
-# # # --- 11. ARMSTRONG NUMBER ----
-# # def arm(n):
-# #     original = n
-# #     total = 0
-# #     power = len(str(n))
-# #     while n > 0:
-# #         dig = n % 10
-# #         total += dig**power
-# #         n = n// 10
-# #     return total == original
-# # print(arm(15))
+# --- 9. PRINT FACTORS ----
+# --- 10. PERFECT NUMBER ---
+# # --- 11. ARMSTRONG NUMBER ----
+# def arm(n):
+#     original = n
+#     total = 0
+#     power = len(str(n))
+#     while n > 0:
+#         dig = n % 10
+#         total += dig**power
+#         n = n// 10
+#     return total == original
+# print(arm(15))
 
-# # --13. MISSING ELEMENT IN ARRAY -- 
-# # def miss(arr):
-# #     n = len(arr) + 1
-    
-# #     xor_all = 0
-# #     xor_given = 0
-    
-# #     # XOR of all 1 to n
-# #     for i in range(1, n+1):
-# #         xor_all = xor_all ^ i
-        
-# #     # XOR of missing elem in arr
-# #     for num in arr:
-# #         xor_given = xor_given ^ num
-# #     return xor_all ^ xor_given
-# # print(miss([1, 2,3,5]))
-
+# --13. MISSING ELEMENT IN ARRAY -- 
 # def miss(arr):
-#     n = len(arr)+1
-#     ori = n * (n+1) // 2
-#     missing = sum(arr)
-#     return ori - missing
-# print(miss([1,2,3,5]))
+#     n = len(arr) + 1
+    
+#     xor_all = 0
+#     xor_given = 0
+    
+#     # XOR of all 1 to n
+#     for i in range(1, n+1):
+#         xor_all = xor_all ^ i
+        
+#     # XOR of missing elem in arr
+#     for num in arr:
+#         xor_given = xor_given ^ num
+#     return xor_all ^ xor_given
+# print(miss([1, 2,3,5]))
+
+def miss(arr):
+    n = len(arr)+1
+    ori = n * (n+1) // 2
+    missing = sum(arr)
+    return ori - missing
+print(miss([1,2,3,5]))
 
         
     
-# # --- 12. TWO SUM (O(N) HASHMAP) ----
-# class Solution:
-#     def twoSum(self, nums: List[int], target: int) -> List[int]:
-#         hash = {}
-#         for key in range(len(nums)):
-#             val = target - nums[key]
+# --- 12. TWO SUM (O(N) HASHMAP) ----
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash = {}
+        for key in range(len(nums)):
+            val = target - nums[key]
 
-#             if val in hash:
-#                 return [hash[val], key]
-#             hash[nums[key]] = key
+            if val in hash:
+                return [hash[val], key]
+            hash[nums[key]] = key
             
-# ### brute force
-#         # for i in range(len(nums)):
-#         #     for j in range(i+1, len(nums)):
-#         #         if nums[i] + nums[j] == target:
-#         #             return [i,j]
+### brute force
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i,j]
 
   
-# # --- 13. FREQUENCY COUNT  ----
-# def findFrequency(self, arr, x):
-#     t = tuple(arr)
-#     return t.count(x)
+# --- 13. FREQUENCY COUNT  ----
+def findFrequency(self, arr, x):
+    t = tuple(arr)
+    return t.count(x)
 
-# # --- 13. FREQUENCY COUNT USING DICTIONARY ----
-# def findFrequency(self, arr, x):
-#     freq = {}
-#     for elem in arr:
-#         if elem in freq:
-#             freq[elem] += 1 # {3:2}
-#         else:                   # or
-#             freq[elem] = 1 # {3:1}
+# --- 13. FREQUENCY COUNT USING DICTIONARY ----
+def findFrequency(self, arr, x):
+    freq = {}
+    for elem in arr:
+        if elem in freq:
+            freq[elem] += 1 # {3:2}
+        else:                   # or
+            freq[elem] = 1 # {3:1}
                 
-#         # if x in freq:
-#         #     return freq[x]
-#         # else:
-#         #     return 0
+        # if x in freq:
+        #     return freq[x]
+        # else:
+        #     return 0
         
-#     # or
-#         return freq.get(x,0)
+    # or
+        return freq.get(x,0)
  
-# ### ----  LC 540. SINGLE ELEMENT IN A SORTED ARRAY ------------
+### ----  LC 540. SINGLE ELEMENT IN A SORTED ARRAY ------------
     
-# def singleNonDuplicate(self, nums):
-#     freq = {}
+def singleNonDuplicate(self, nums):
+    freq = {}
 
-#     for elem in nums:
-#         if elem in freq:
-#             freq[elem] += 1
-#         else:
-#             freq[elem] = 1
+    for elem in nums:
+        if elem in freq:
+            freq[elem] += 1
+        else:
+            freq[elem] = 1
 
-#     for elem in freq:
-#         if freq[elem] == 1:
-#             return elem
+    for elem in freq:
+        if freq[elem] == 1:
+            return elem
         
-# # --- 10. Count num of vowels ----
-# # vowels = ['a', 'e', 'i', 'o', 'u']
-# # word = input("Enter any word: ")
-# # count = 0
-# # for i in range(len(word)):
-# #     if word[i] in vowels:
-# #         count += 1
-# # if count == 0:
-# #     print("no vowels")
-# # else:
-# #     print("Num of vowels:", count)
+# --- 10. Count num of vowels ----
+# vowels = ['a', 'e', 'i', 'o', 'u']
+# word = input("Enter any word: ")
+# count = 0
+# for i in range(len(word)):
+#     if word[i] in vowels:
+#         count += 1
+# if count == 0:
+#     print("no vowels")
+# else:
+#     print("Num of vowels:", count)
 
-# # =========================
-# # HASHMAP (FREQUENCY PATTERN)
-# # =========================
+# =========================
+# HASHMAP (FREQUENCY PATTERN)
+# =========================
 
-# # --- 14. TOP K FREQUENT (BASIC VERSION) ---
-# def topk(nums):
-#     freq = {}
-#     for elem in nums:
-#     # count freq of each elem
-#         if elem in freq:
-#             freq[elem] +=1
-#         else:
-#             freq[elem] = 1
+# --- 14. TOP K FREQUENT (BASIC VERSION) ---
+def topk(nums):
+    freq = {}
+    for elem in nums:
+    # count freq of each elem
+        if elem in freq:
+            freq[elem] +=1
+        else:
+            freq[elem] = 1
             
-#         result = []
-#         for i in range(k): 
-#             max_freq = 0
-#             max_num = 0
-#             for elem in freq:
-#                 if freq[elem] > max_freq:
-#                     max_freq=freq[elem]
-#                     max_elem=elem
-#             result.append(max_elem)
+        result = []
+        for i in range(k): 
+            max_freq = 0
+            max_num = 0
+            for elem in freq:
+                if freq[elem] > max_freq:
+                    max_freq=freq[elem]
+                    max_elem=elem
+            result.append(max_elem)
         
-#         del freq[max_elem]
-#     return result
+        del freq[max_elem]
+    return result
     
-# # --- 15. FIRST NON-REPEATING CHARACTER ---
-# class Solution:
-#     def nonRepeatingChar(self,s):
-#         freq = {}
+# --- 15. FIRST NON-REPEATING CHARACTER ---
+class Solution:
+    def nonRepeatingChar(self,s):
+        freq = {}
         
-#         for ch in s:
-#             if ch in freq:
-#                 freq[ch] += 1
-#             else:
-#                 freq[ch] = 1
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
             
-#         for ch in s:
-#             if freq[ch] == 1:
-#                 return ch 
-#         else:
-#             return "$"
+        for ch in s:
+            if freq[ch] == 1:
+                return ch 
+        else:
+            return "$"
                 
-# # --- 16. CHARACTER FREQUENCY ---
-# class Solution:
-#     def charFrequency(self, s: str):
-#         freq = {}
+# --- 16. CHARACTER FREQUENCY ---
+class Solution:
+    def charFrequency(self, s: str):
+        freq = {}
 
-#         for ch in s:
-#             if ch in freq:
-#                 freq[ch] += 1
-#             else:
-#                 freq[ch] = 1
+        for ch in s:
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
 
-#         return freq
+        return freq
     
-# # --- 17. SUB ARRAY SUM EQUALS K ---
-#     def subarraySum(self, nums: List[int], k: int) -> int:
-#         pre_freq= {0:1}
-#         run_sum = 0
-#         result = 0
+# --- 17. SUB ARRAY SUM EQUALS K ---
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        pre_freq= {0:1}
+        run_sum = 0
+        result = 0
 
-#         for elem in nums:
-#             run_sum += elem
-#             prev = run_sum - k
+        for elem in nums:
+            run_sum += elem
+            prev = run_sum - k
 
-#             if prev in pre_freq:
-#                 result = result+pre_freq[prev]
+            if prev in pre_freq:
+                result = result+pre_freq[prev]
 
-#             if run_sum in pre_freq:
-#                 pre_freq[run_sum] +=1
-#             else:
-#                 pre_freq[run_sum] = 1
-#         return result
+            if run_sum in pre_freq:
+                pre_freq[run_sum] +=1
+            else:
+                pre_freq[run_sum] = 1
+        return result
 
 
-# # =========================
-# # TWO POINTER PATTERN
-# # =========================
+# =========================
+# TWO POINTER PATTERN
+# =========================
 
-# # --- 18. STRING PALINDROME ---
-# class Solution:
-#     def isPalindrome(self, s):
-#         return s[::-1] == s
+# --- 18. STRING PALINDROME ---
+class Solution:
+    def isPalindrome(self, s):
+        return s[::-1] == s
     
-# # --- 19. REVERSE WORDS IN A STRING ---
-# class Solution:
-#     def reverseWords(self, s):
-#         words = s.split(".")
+# --- 19. REVERSE WORDS IN A STRING ---
+class Solution:
+    def reverseWords(self, s):
+        words = s.split(".")
         
-#         clean = []
-#         for w in words:
-#             if w!="":
-#                 clean.append(w)
-#         clean.reverse()
-#         return ".".join(clean)
+        clean = []
+        for w in words:
+            if w!="":
+                clean.append(w)
+        clean.reverse()
+        return ".".join(clean)
 
 
-# # =========================
-# # SLIDING WINDOW (FIXED SIZE)
-# # =========================
+# =========================
+# SLIDING WINDOW (FIXED SIZE)
+# =========================
 
-# # --- 20. MAXIMUM SUB ARRAY OF SIZE K ---
-
-
-# # --- 21. MAX Average SUB ARRAY ---
-# class Solution:
-#     def findMaxAverage(self, arr, n, k):
-#         curr = sum(arr[:k])
-#         max_sum = curr ## gives max sum among all sub arraay
-#         start_index = 0 # gives max sum sub array
-
-#         for i in range(1, n - k + 1):
-#             curr = curr - arr[i - 1] + arr[i + k - 1]
-
-#             if curr > max_sum:
-#                 max_sum = curr
-#                 start_index = i
-
-#         return start_index
-
-# # =========================
-# # SLIDING WINDOW (VARIABLE SIZE)
-# # =========================
-
-# # --- 22. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS ---
-# class Solution:
-#     def lengthOfLongestSubstring(self, s: str) -> int:
-#         freq = {}
-#         left = 0 # index
-#         max_len = 0
-
-#         for right in range(len(s)):
-#             ch = s[right]
-#             if ch in freq:
-#                 freq[ch] +=1
-#             else:
-#                 freq[ch] =1
-
-#             while freq[ch] >1:
-#                 left_char=s[left]
-#                 freq[left_char] -=1
-#                 left +=1
-#             max_len = max(max_len, right - left +1)
-#         return max_len
+# --- 20. MAXIMUM SUB ARRAY OF SIZE K ---
 
 
-# # --- 23. SMALLEST SUB ARRAY >= TARGET ---
-# class Solution:
-#     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+# --- 21. MAX Average SUB ARRAY ---
+class Solution:
+    def findMaxAverage(self, arr, n, k):
+        curr = sum(arr[:k])
+        max_sum = curr ## gives max sum among all sub arraay
+        start_index = 0 # gives max sum sub array
+
+        for i in range(1, n - k + 1):
+            curr = curr - arr[i - 1] + arr[i + k - 1]
+
+            if curr > max_sum:
+                max_sum = curr
+                start_index = i
+
+        return start_index
+
+# =========================
+# SLIDING WINDOW (VARIABLE SIZE)
+# =========================
+
+# --- 22. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS ---
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        freq = {}
+        left = 0 # index
+        max_len = 0
+
+        for right in range(len(s)):
+            ch = s[right]
+            if ch in freq:
+                freq[ch] +=1
+            else:
+                freq[ch] =1
+
+            while freq[ch] >1:
+                left_char=s[left]
+                freq[left_char] -=1
+                left +=1
+            max_len = max(max_len, right - left +1)
+        return max_len
+
+
+# --- 23. SMALLEST SUB ARRAY >= TARGET ---
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         
-#         left = 0                    # left pointer of window
-#         curr_sum = 0                # sum of current window
-#         min_len = float("inf")      # store minimum length found
+        left = 0                    # left pointer of window
+        curr_sum = 0                # sum of current window
+        min_len = float("inf")      # store minimum length found
         
-#         # Expand the window using right pointer
-#         for right in range(len(nums)):
+        # Expand the window using right pointer
+        for right in range(len(nums)):
             
-#             curr_sum += nums[right]     # add current element to window
+            curr_sum += nums[right]     # add current element to window
             
-#             # Shrink window while condition is satisfied
-#             while curr_sum >= target:
+            # Shrink window while condition is satisfied
+            while curr_sum >= target:
                 
-#                 # Update minimum length
-#                 min_len = min(min_len, right - left + 1)
+                # Update minimum length
+                min_len = min(min_len, right - left + 1)
                 
-#                 # Remove left element from window
-#                 curr_sum -= nums[left]
+                # Remove left element from window
+                curr_sum -= nums[left]
                 
-#                 # Move left pointer forward
-#                 left += 1
+                # Move left pointer forward
+                left += 1
         
-#         # If no valid window found, return 0
-#         if min_len == float("inf"):
-#             return 0
-#         else:
-#             return min_len
-# # =========================
-# # KADANE / GREEDY PATTERN
-# # =========================
+        # If no valid window found, return 0
+        if min_len == float("inf"):
+            return 0
+        else:
+            return min_len
+# =========================
+# KADANE / GREEDY PATTERN
+# =========================
 
-# # --- 24. MAXIMUM SUB ARRAY ---
-# class Solution:
-#     def maxSubArray(self, nums: List[int]) -> int:
-#         curr_sum = nums[0]
-#         max_sum =nums[0]
+# --- 24. MAXIMUM SUB ARRAY ---
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        curr_sum = nums[0]
+        max_sum =nums[0]
 
-#         for i in range(1, len(nums)):
-#             curr_sum = max(nums[i], curr_sum + nums[i])
-#             max_sum = max(max_sum, curr_sum)
-#         return max_sum
-# # --- 25. BEST TIME TO BUY AND SELL STOCK ---
-# class Solution:
-#     def maxProfit(self, prices: List[int]) -> int:
-#         buy = prices[0]
-#         profit = 0
+        for i in range(1, len(nums)):
+            curr_sum = max(nums[i], curr_sum + nums[i])
+            max_sum = max(max_sum, curr_sum)
+        return max_sum
+# --- 25. BEST TIME TO BUY AND SELL STOCK ---
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        buy = prices[0]
+        profit = 0
 
-#         for day_price in prices:
-#             profit = max(profit , day_price - buy)
-#             buy = min(buy, day_price)
-#         return profit
+        for day_price in prices:
+            profit = max(profit , day_price - buy)
+            buy = min(buy, day_price)
+        return profit
         
 
 
-# ###  ------------------------    PYQS ------------------------------####
+###  ------------------------    PYQS ------------------------------####
 
-# # 1. STRING COMPRESSION 
-# def compress_string(s):
-#     freq ={}
-#     i = 0
-#     while i < len(s):
-#         ch = s[i]
-#         i+=1
-#         num =""
-#         while i <len(s) and s[i].isdigit():
-#             num += s[i]
-#             i+=1
+# 1. STRING COMPRESSION 
+def compress_string(s):
+    freq ={}
+    i = 0
+    while i < len(s):
+        ch = s[i]
+        i+=1
+        num =""
+        while i <len(s) and s[i].isdigit():
+            num += s[i]
+            i+=1
             
-#         if ch in freq:
-#             freq[ch] += int(num)
-#         else:
-#             freq[ch] = int(num)
+        if ch in freq:
+            freq[ch] += int(num)
+        else:
+            freq[ch] = int(num)
         
-#         result = ""
-#         for ch in sorted(freq):
-#             result = ch + str(freq[ch])
-#         return ch
+        result = ""
+        for ch in sorted(freq):
+            result = ch + str(freq[ch])
+        return ch
             
         
 def ans(hours, minutes, seconds):
