@@ -1,30 +1,30 @@
-# # Reverse String
-# # with slicing
-# # res = s[::-1]
-# # return res
+# Reverse String
+# with slicing
+# res = s[::-1]
+# return res
 
-# # class Solution:
-# #     def revStr (self, s : str) -> str :
-# #         S= list(s)
-# #         l = 0
-# #         r = len(S)-1
-# #         while l < r:
-# #             S[l], S[r] =S[r], S[l]
-# #             l +=1
-# #             r -=1
-# #         return "".join(S)
+# class Solution:
+#     def revStr (self, s : str) -> str :
+#         S= list(s)
+#         l = 0
+#         r = len(S)-1
+#         while l < r:
+#             S[l], S[r] =S[r], S[l]
+#             l +=1
+#             r -=1
+#         return "".join(S)
     
-# # # ------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
-# # # ------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
+# # ------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
+# # ------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
 
-# # # def prime(num):
-# # #     if num<=1:
-# # #         return False
+# # def prime(num):
+# #     if num<=1:
+# #         return False
     
-# # #     for i in range(2, int(num**0.5)+1):
-# # #         if num%i == 0:
-# # #             return False
-# # #     return True
+# #     for i in range(2, int(num**0.5)+1):
+# #         if num%i == 0:
+# #             return False
+# #     return True
     
 # # # num = int(input("Enter the num: ")) 
 # # # print(prime(num))  
