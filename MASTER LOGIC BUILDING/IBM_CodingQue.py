@@ -237,7 +237,10 @@ def arm(n):
     return total == original
 print(arm(15))
 
+
 #--13. MISSING ELEMENT IN ARRAY -- 
+#-13. MISSING ELEMENT IN ARRAY -- 
+
 def miss(arr):
     n = len(arr) + 1
     
@@ -265,7 +268,7 @@ print(miss([1,2,3,5]))
     
 # --- 12. TWO SUM (O(N) HASHMAP) ----
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums, target):
         hash = {}
         for key in range(len(nums)):
             val = target - nums[key]
@@ -356,7 +359,7 @@ def topk(nums):
             freq[elem] = 1
             
         result = []
-        for i in range(k): 
+        for i in range(nums): 
             max_freq = 0
             max_num = 0
             for elem in freq:
@@ -399,7 +402,7 @@ class Solution:
         return freq
     
 # --- 17. SUB ARRAY SUM EQUALS K ---
-    def subarraySum(self, nums: List[int], k: int) -> int:
+    def Sub_arraySum(self, nums, k):
         pre_freq= {0:1}
         run_sum = 0
         result = 0
@@ -451,7 +454,7 @@ class Solution:
 class Solution:
     def findMaxAverage(self, arr, n, k):
         curr = sum(arr[:k])
-        max_sum = curr ## gives max sum among all sub arraay
+        max_sum = curr ## gives max sum among all sub array
         start_index = 0 # gives max sum sub array
 
         for i in range(1, n - k + 1):
@@ -463,13 +466,13 @@ class Solution:
 
         return start_index
 
-# =========================
+#####################
 # SLIDING WINDOW (VARIABLE SIZE)
-# =========================
+################################
 
 # --- 22. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS ---
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring(self, s):
         freq = {}
         left = 0 # index
         max_len = 0
@@ -491,15 +494,14 @@ class Solution:
 
 # --- 23. SMALLEST SUB ARRAY >= TARGET ---
 class Solution:
-    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+    def minSubArrayLen(self, target, nums):
         
         left = 0                    # left pointer of window
         curr_sum = 0                # sum of current window
-        min_len = float("inf")      # store minimum length found
+        min_len = float('inf')      # store minimum length found
         
         # Expand the window using right pointer
         for right in range(len(nums)):
-            
             curr_sum += nums[right]     # add current element to window
             
             # Shrink window while condition is satisfied
@@ -520,12 +522,12 @@ class Solution:
         else:
             return min_len
 # =========================
-# KADANE / GREEDY PATTERN
+# KADANE'S / GREEDY PATTERN
 # =========================
 
 # --- 24. MAXIMUM SUB ARRAY ---
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
+    def maxSubArray(self, nums) :
         curr_sum = nums[0]
         max_sum =nums[0]
 
@@ -535,7 +537,7 @@ class Solution:
         return max_sum
 # --- 25. BEST TIME TO BUY AND SELL STOCK ---
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices):
         buy = prices[0]
         profit = 0
 
@@ -546,7 +548,7 @@ class Solution:
         
 
 
-###  ------------------------    PYQS ------------------------------####
+###  ------------------------  PYQ'S ------------------------------####
 
 # 1. STRING COMPRESSION 
 def compress_string(s):
