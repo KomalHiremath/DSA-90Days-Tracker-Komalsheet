@@ -1,7 +1,9 @@
-Reverse String
-with slicing
-res = s[::-1]
-return res
+
+# Reverse String
+# with slicing
+
+# res = s[::-1]
+# return res
 
 class Solution:
     def revStr (self, s : str) -> str :
@@ -14,8 +16,12 @@ class Solution:
             r -=1
         return "".join(S)
     
------- 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
------- 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
+
+#------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
+#------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
+# ------ 1. PRIME CHECK (OPTIMIZED √N VERSION)  -----
+# ------ 1. PRINT PRIMES (VARIATION OF PRIME LOGIC) ----
+
 
 def prime(num):
     if num<=1:
@@ -26,8 +32,13 @@ def prime(num):
             return False
     return True
     
+
 # num = int(input("Enter the num: ")) 
 # print(prime(num))  
+
+num = int(input("Enter the num: ")) 
+print(prime(num))  
+
 
 # ---- 2. COUNT DIGITS ----------
 
@@ -42,6 +53,15 @@ def count(n):
 #         count +=1
 #         n = n//10
 #     return count
+    n = abs(n) 
+    if n == 0:
+        return 1
+    count = 0
+    while n > 0:
+        count +=1
+        n = n//10
+    return count
+
 
 n = int(input("Enter the num: ")) 
 print(count(n))
@@ -203,8 +223,8 @@ def prime(start, end):
                     
 print(prime(10, 20))
 
---- 9. PRINT FACTORS ----
---- 10. PERFECT NUMBER ---
+#--- 9. PRINT FACTORS ----
+#--- 10. PERFECT NUMBER ---
 # --- 11. ARMSTRONG NUMBER ----
 def arm(n):
     original = n
@@ -217,7 +237,7 @@ def arm(n):
     return total == original
 print(arm(15))
 
---13. MISSING ELEMENT IN ARRAY -- 
+#--13. MISSING ELEMENT IN ARRAY -- 
 def miss(arr):
     n = len(arr) + 1
     
@@ -309,6 +329,17 @@ def singleNonDuplicate(self, nums):
 #     print("no vowels")
 # else:
 #     print("Num of vowels:", count)
+vowels = ['a', 'e', 'i', 'o', 'u']
+word = input("Enter any word: ")
+count = 0
+for i in range(len(word)):
+    if word[i] in vowels:
+        count += 1
+if count == 0:
+    print("no vowels")
+else:
+    print("Num of vowels:", count)
+
 
 # =========================
 # HASHMAP (FREQUENCY PATTERN)

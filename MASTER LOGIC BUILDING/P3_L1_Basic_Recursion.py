@@ -67,19 +67,33 @@ print(fact(num))
 
 # # 7. Calculate power of a number (xⁿ) using recursion. 
 # # 8. Find nth Fibonacci number recursively. 
+def fib(n):
+    if n <= 1: return n
+    return fib(n-2) +fib(n-1)
+
 # # 9. Print Fibonacci series up to n terms recursively. 
+def fibSeries(n):
+    if n <=1:
+        return n
+    return fibSeries(n-1) + fibSeries(n-2)
+print(fibSeries(7)) # 13 --> returns 7th Fibonacci number
+
+def printFibSeries(n):
+    for i in range(n):
+        print(fibSeries(i), end = " ")
+printFibSeries(7) # 0 1 1 2 3 5 8 --> prints series of 7 terms
+
 # 10. Find sum of digits of a number recursively.
-
-def rec(digit):
-    if digit == 0:
+def num(n):
+    if n == 0:
         return 0
-    last = digit % 10
-    remaining = digit // 10
-    return last + rec(remaining)
+    last = n % 10
+    rem = n // 10
+    return last + num(rem)
+    
+n = int(input("NUm : "))
+print(num(n))
 
-
-digit=  int(input("Enter the num"))
-print(rec(digit))   
 
 
     
