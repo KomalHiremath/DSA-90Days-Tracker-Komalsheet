@@ -75,6 +75,21 @@ n = int(input("NUMs: "))
 print(armstrong(n)) 
 
 # 6. Check if a number is a perfect number. 
+# LC: https://leetcode.com/problems/perfect-number/description/
+# GFG: https://www.geeksforgeeks.org/problems/perfect-numbers3207/1
+def checkPerfectNumber(self, num: int) -> bool:
+    if num<=1:
+        return False
+    s= 1
+    for i in range(2,int(num**0.5)+1):
+        if num%i == 0:
+            s+=i
+            if i!=num//i:
+                s+=num//i
+    return s==num
+# num = 28  op: 28 = 1 + 2 + 4 + 7 + 14 --> 1, 2, 4, 7, and 14 are all divisors of 28.
+
+
 # 7. Print all prime numbers between 1 and 100.
 #GFG: https://www.geeksforgeeks.org/problems/prime-number2314/1 
 def prime(a, b):
@@ -131,4 +146,3 @@ def fib(n):
 n = int(input("NUMs: "))
 print(fib(n)) 
 # NUMs: 5 op:7(0+1+1+2+3) --> n = 5 iterations
-
