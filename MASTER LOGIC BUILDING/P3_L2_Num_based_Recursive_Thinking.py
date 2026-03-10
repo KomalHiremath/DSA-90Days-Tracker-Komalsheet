@@ -76,6 +76,23 @@
 # print(binary(n))
 
 # 7. Print digits of a number in words recursively (e.g., 123 → “one two three”).
+# def read(n):
+#     word= ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+#     res = ""
+#     for i in n:
+#         res +=  word[int(i)] + " "
+#     return res
+# n = input("NUM: ")
+# print(read(n))
+
+def read(n):
+    word= ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    if n =="":
+        return ""
+    return word[int(n[0])] + " " +read(n[1:])
+n = input("NUM: ")
+print(read(n))
+        
 #  8. Calculate the sum of the first n even numbers recursively. 
 # 9. Calculate the sum of the first n odd numbers recursively. 
 # 10. Find nCr (Combination formula) recursively using Pascal’s relation.
