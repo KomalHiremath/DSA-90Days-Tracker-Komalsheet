@@ -46,8 +46,34 @@
 # a = int(input("NUM: "))
 # b = int(input("NUM: "))
 # print(gcd(a,b))
-    
-# 6. Convert a number to binary recursively. 
+
+# # 6. Convert a number to binary    
+# def bin(n):
+#     b = ""
+#     if n == 0:
+#         return n
+#     else:
+#         while n > 0:
+#             rem = n%2
+#             b = str(rem) + b
+#             n =n//2
+#         return b
+# n = int(input("NUM: "))
+# print(bin(n))    
+
+# # 6. Convert a number to binary recursively. 
+# def bin(n):
+#     if n==0:
+#         return ""
+#     return bin(n//2) + str(n%2)
+# n = int(input("NUM: "))
+# print(bin(n))
+
+# # 6. Convert a number to binary(BUILT-IN)
+# def binary(n):
+#     return bin(n)
+# n = int(input("NUM: "))
+# print(binary(n))
 
 # 7. Print digits of a number in words recursively (e.g., 123 → “one two three”).
 #  8. Calculate the sum of the first n even numbers recursively. 
