@@ -85,14 +85,29 @@
 # n = input("NUM: ")
 # print(read(n))
 
-def read(n):
-    word= ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    if n =="":
-        return ""
-    return word[int(n[0])] + " " +read(n[1:])
-n = input("NUM: ")
-print(read(n))
+# def read(n):
+#     word= ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+#     if n =="":
+#         return ""
+#     return word[int(n[0])] + " " +read(n[1:])
+# n = input("NUM: ")
+# print(read(n))
         
-#  8. Calculate the sum of the first n even numbers recursively. 
-# 9. Calculate the sum of the first n odd numbers recursively. 
+## 8. Calculate the sum of the first n even numbers recursively. 
+# def even(n):
+#     if n == 0:
+#         return 0
+#     return 2*n + even(n-1)
+# n = int(input("NUM: "))
+# print(even(n))
+
+# 9. Calculate the sum of the first n odd numbers recursively.
+def odd(n):
+    if n == 0:
+        return 0
+    return (2*n -1)+ odd(n-1)
+n = int(input("NUM: "))
+print(odd(n))
+ 
+
 # 10. Find nCr (Combination formula) recursively using Pascal’s relation.
