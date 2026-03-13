@@ -136,24 +136,106 @@
          
  
 # # 7. Count how many elements are even and odd. 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+# def find(n):
+#     even = odd = 0
+#     for i in arr:
+#         if i%2 ==0:
+#             even +=1
+#         else:
+#             odd +=1
+#     print("Even", even)
+#     print("odd", odd)
+# n = int(input("enter the size: "))
+# arr = elem(n)
+# find(arr)
+            
+# # 8. Find the index of the maximum element. 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+# def find(arr):
+#     max_val = max(arr)
+#     return arr.index(max_val)
+   
+# n = int(input("enter the size:"))
+# arr = elem(n)
+# print("Index is:", find(arr))
+
+################    OR      ###################
+
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def find(arr):
+#     max_index = 0
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[max_index]:
+#             max_index = i
+#     return max_index
+
+# n = int(input("enter the size:"))
+# arr=elem(n)
+# print(find(arr))
+
+
+# # 9. Find the index of the minimum element. 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def find(arr):
+#     min_val = min(arr)
+#     return arr.index(min_val)
+   
+# n = int(input("enter the size:"))
+# arr = elem(n)
+# print("Index is:", find(arr))
+
+################    OR      ###################
+
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def find(arr):
+#     min_index = 0
+#     for i in range(1, len(arr)):
+#         if arr[i] < arr[min_index]:
+#             min_index = i
+#     return min_index
+
+# n = int(input("enter the size:"))
+# arr=elem(n)
+# print(find(arr))
+
+# # 10. Take n elements and print only those greater than a given value k.
 def elem(n):
     arr = []
     for i in range(n):
         arr.append(int(input()))
     return arr
-def find(n):
-    even = odd = 0
+def greater(arr):
+    nums = []
     for i in arr:
-        if i%2 ==0:
-            even +=1
-        else:
-            odd +=1
-    print("Even", even)
-    print("odd", odd)
-n = int(input("enter the size: "))
-arr = elem(n)
-find(arr)
-            
-# # 8. Find the index of the maximum element. 
-# # 9. Find the index of the minimum element. 
-# # 10. Take n elements and print only those greater than a given value k.
+        if i > k:
+            nums.append(i)
+    return nums
+n = int(input("enter the size:"))
+arr=elem(n)
+k= int(input("Enter the Val: "))
+print(greater(arr))
+
