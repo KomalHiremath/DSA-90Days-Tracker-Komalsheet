@@ -30,32 +30,93 @@
 # k = int(input("Enter the num to search: "))
 # print(find(arr))
 
-# 2. Count how many times a given element appears. 
+# # 2. Count how many times a given element appears. 
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def appear(arr):
+#     cnt = 0
+#     for i in arr:
+#         if i == k:
+#             cnt +=1
+#     return cnt
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# k = int(input("Enter the num to search: "))
+# print(appear(arr))
+    
+# 3. Find the first occurrence of a given number.
+# arr = [5, 3, 7, 3, 9] # k = 3
+# output: 1 --> Because the first 3 appears at index 1.
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def occ(arr):
+#     for i in range (len(arr)):
+#         if arr[i] == k:
+#             return i
+#     return -1
+        
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# k = int(input("Enter the num to search: "))
+# print(occ(arr))
+
+# # 4. Find the last occurrence of a given number. 
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def occ(arr):
+#     index = -1
+#     for i in range (len(arr)):
+#         if arr[i] == k:
+#             index = i
+#     return index
+
+# def occ(arr):
+#     for i in range (len(arr)-1, -1, -1): # range(start, stop, step)
+#         if arr[i] == k:
+#             return i
+#     return 1
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# k = int(input("Enter the num to search: "))
+# print(occ(arr))
+
+
+# 5. Find the first and last occurrence of a given number. 
 def element(n):
     arr =[]
     for i in range(n):
         arr.append(int(input()))
     return arr
 
-def appear(arr):
-    cnt = 0
-    for i in arr:
-        if i == k:
-            cnt +=1
-    return cnt
+def first_occ(arr, k):
+    for i in range (len(arr)):
+        if arr[i] == k:
+            return i
+    return -1
+
+def last_occ(arr, k):
+    for i in range (len(arr)-1, -1, -1): # range(start, stop, step)
+        if arr[i] == k:
+            return i
+    return -1
+
 n = int(input("Enter the size: "))
 arr = element(n)
 k = int(input("Enter the num to search: "))
-print(appear(arr))
-        
-    
-    
-    
-    
-    
-    
-# 3. Find the first occurrence of a given number. 
-# 4. Find the last occurrence of a given number. 
+print(first_occ(arr, k), last_occ(arr, k))
+
 # 5. Check if all elements in an array are unique. 
 # 6. Find the sum of even elements only. 
 # 7. Find the sum of odd elements only. 
