@@ -215,22 +215,44 @@
 # arr = element(n)
 # print("Counts:",cnt(arr))
 
-# 9. Count how many numbers are divisible by 3 and 5 both. 
+## 10. Count how many numbers are divisible by 3 and 5 both. 
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def cnt(arr):
+#     count = 0
+#     for i in arr:
+#         if i%3 == 0 and i%5==0:
+#             count +=1
+#     return count
+
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# print("Counts:",cnt(arr))
+
+# 11. Count how many elements are perfect squares. 
 def element(n):
     arr =[]
     for i in range(n):
         arr.append(int(input()))
     return arr
 
+def perfect(num):
+    if n<0:
+        return False
+    root = int(num **0.5)
+    return root * root == num
+
 def cnt(arr):
     count = 0
-    for i in arr:
-        if i%3 == 0 and i%5==0:
-            count +=1
+    for num in arr:
+        if perfect(num):
+            count += 1
     return count
 
 n = int(input("Enter the size: "))
 arr = element(n)
 print("Counts:",cnt(arr))
-
-# 10. Count how many elements are perfect squares. 
