@@ -158,25 +158,79 @@
 # arr = element(n)
 # print("The sum is:", odd(arr))
 
-# 8. Check if all elements in an array are unique. 
+## 8. Check if all elements in an array are unique. 
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def unique(arr):                          # Time: O(n²)
+#     for i in range(len(arr)):
+#         for j in range(i+1, len(arr)):
+#             if arr[i] == arr[j]:
+#                 return False
+#     return True
+
+# def unique(arr):                            #Time: O(n)
+#     return len(arr) == len(set(arr))
+
+# def unique(arr):
+#     seen = set()
+#     for i in arr:
+#         if i in seen:
+#             return False
+#         seen.add(i)
+#     return True
+
+
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# print(unique(arr))
+
+    
+## 9. Find the count of prime numbers in the array. 
+# def element(n):
+#     arr =[]
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def prime(arr):
+#     if n<= 1:
+#         return False
+#     for i in range(2, int(n**0.5)+1):
+#         if n % i == 0:
+#             return False   
+#     return True
+
+# def cnt(arr):
+#     count = 0
+#     for num in arr:
+#         if prime(num):
+#             count +=1
+#     return count
+
+# n = int(input("Enter the size: "))
+# arr = element(n)
+# print("Counts:",cnt(arr))
+
+# 9. Count how many numbers are divisible by 3 and 5 both. 
 def element(n):
     arr =[]
     for i in range(n):
         arr.append(int(input()))
     return arr
-def unique(arr):
-    j = arr[i] +1
-    for i in range(len(arr)+1):
-        if j==i:
-            return False
-    return True
+
+def cnt(arr):
+    count = 0
+    for i in arr:
+        if i%3 == 0 and i%5==0:
+            count +=1
+    return count
+
 n = int(input("Enter the size: "))
 arr = element(n)
-print(unique(arr))
+print("Counts:",cnt(arr))
 
-        
-
-
-# 8. Find the count of prime numbers in the array. 
-# 9. Count how many numbers are divisible by 3 and 5 both. 
 # 10. Count how many elements are perfect squares. 
