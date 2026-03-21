@@ -1,0 +1,93 @@
+# 1. Create a new array containing squares of all numbers. 
+# 2. Create a new array containing only even elements. 
+# 3. Replace every negative number with 0. 
+# 4. Replace all even numbers with 1 and all odd with 0. 
+# 5. Swap the first and last elements of the array. 
+# 6. Reverse an array (without using built-in reverse). 
+# 7. Rotate an array by one position to the left. 
+# 8. Rotate an array by one position to the right. 
+# 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
+# 10. Copy one array to another manually. 
+
+ ###########----------------#########################
+ 
+# 1. Create a new array containing squares of all numbers. 
+# def element(n):
+#     arr = []
+#     for i in range(1, n+1):
+#         arr.append(i*i)
+#     return arr
+
+# n = int(input("Enter the size of arr:"))
+# print(element(n))
+
+##      OR        ###
+
+# def element(n):
+#     return [i*i for i in range(1, n+1)]
+
+# n = int(input("Enter the size of arr:"))
+# print(element(n))
+
+
+# 2. Create a new array containing only even elements. 
+# def even(n):
+    # arr = []
+    # for i in range(1, n+1):
+    #     if i%2 == 0:
+    #         arr.append(i)
+    # return arr
+    
+# n = int(input("Enter the size of arr:"))
+# print(even(n))
+
+###     OR  #############
+# def even(n):
+#     return [i for i in range(n1, +1) if i%2 == 0 ]
+
+# n = int(input("Enter the size of arr:"))
+# print(even(n))
+  
+## 3. Replace every negative number with 0. 
+# def element(n):
+#     arr = []
+#     for i in range(n):
+#         num = int(input())
+#         if num<0:
+#             arr.append(0)
+#         else:
+#             arr.append(num)
+#     return arr
+
+# n = int(input("Enter the size of arr:"))
+# print(element(n))
+              
+# # 4. Replace all even numbers with 1 and all odd with 0. 
+# def element(n):
+#     arr = []
+#     for i in range(n):
+#         num = int(input())
+#         if num%2 == 0:
+#             arr.append(1)
+#         else:
+#             arr.append(0)
+#     return arr
+
+# n = int(input("Enter the size of arr:"))
+# print(element(n))
+
+# 5. Swap the first and last elements of the array. 
+def elem(n):
+    arr = []
+    for i in range(n):
+        arr.append(int(input()))
+    arr[0], arr[-1] = arr[-1], arr[0]
+    return arr
+n = int(input("Enter the size of arr:"))
+print(elem(n))
+# 6. Reverse an array (without using built-in reverse). 
+# 7. Rotate an array by one position to the left. 
+# 8. Rotate an array by one position to the right. 
+# 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
+# 10. Copy one array to another manually. 
+
