@@ -76,16 +76,34 @@
 # n = int(input("Enter the size of arr:"))
 # print(element(n))
 
-# 5. Swap the first and last elements of the array. 
+# # 5. Swap the first and last elements of the array. 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     arr[0], arr[-1] = arr[-1], arr[0]
+#     return arr
+# n = int(input("Enter the size of arr:"))
+# print(elem(n))
+
+# 6. Reverse an array (without using built-in reverse).
 def elem(n):
     arr = []
     for i in range(n):
         arr.append(int(input()))
-    arr[0], arr[-1] = arr[-1], arr[0]
+    return arr
+        
+def rev(arr):
+    l = 0
+    r = len(arr) -1
+    while l < r: 
+        arr[l], arr[r] = arr[r], arr[l]
     return arr
 n = int(input("Enter the size of arr:"))
-print(elem(n))
-# 6. Reverse an array (without using built-in reverse). 
+arr = elem(n)
+print("REverse", rev(arr))
+    
+
 # 7. Rotate an array by one position to the left. 
 # 8. Rotate an array by one position to the right. 
 # 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
