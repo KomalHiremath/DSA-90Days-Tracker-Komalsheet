@@ -86,22 +86,39 @@
 # n = int(input("Enter the size of arr:"))
 # print(elem(n))
 
-# 6. Reverse an array (without using built-in reverse).
-def elem(n):
-    arr = []
-    for i in range(n):
-        arr.append(int(input()))
-    return arr
-        
-def rev(arr):
-    l = 0
-    r = len(arr) -1
-    while l < r: 
-        arr[l], arr[r] = arr[r], arr[l]
-    return arr
-n = int(input("Enter the size of arr:"))
-arr = elem(n)
-print("REverse", rev(arr))
+# # 6. Reverse an array (without using built-in reverse).
+# GFG : https://www.geeksforgeeks.org/problems/reverse-an-array/1
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def rev(arr):
+#     arr.reverse()
+#     return arr
+
+## TWO POINTER     
+# def rev(arr):
+#     l = 0
+#     r = len(arr)-1
+#     while l < r: 
+#         arr[l], arr[r] = arr[r], arr[l]
+#         l += 1
+#         r -= 1
+#     return arr
+
+
+# #   RECURSION 
+# def rev(arr):
+#     n = len(arr)
+#     for i in range(n//2):      # no +1, loop handles stopping
+#         arr[i], arr[n-i-1] = arr[n-i-1], arr[i]
+#     return arr
+
+# n = int(input("Enter the size of arr:"))
+# arr = elem(n)
+# print("Reverse", rev(arr))
     
 
 # 7. Rotate an array by one position to the left. 
