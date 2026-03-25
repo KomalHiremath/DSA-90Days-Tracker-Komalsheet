@@ -122,6 +122,41 @@
     
 
 # 7. Rotate an array by one position to the left. 
+def elem(n):
+    arr = []
+    for i in range(n):
+        arr.append(int(input()))
+    return arr
+
+# def rotate(arr, k):
+#     n = len(arr)
+#     k = k%n
+#     arr1 = arr[0:k]
+#     arr2 = arr[k:]
+    
+#     arr1.reverse()
+#     arr2.reverse()
+    
+#     result = arr1[:] + arr2[:]
+#     arr[:] = result
+#     arr.reverse()
+#     return arr
+
+def rotate(arr):
+    n = len(arr)
+    temp = arr[0]
+    # shift to the left
+    for i in range(1, n):
+        arr[i-1] = arr[i]
+    arr[n-1] = temp
+    return arr
+    
+n = int(input("Enter the size of array:"))
+arr = elem(n)
+# k= int(input("Enter the no. of position to rotate:"))
+print(rotate(arr))
+    
+    
 # 8. Rotate an array by one position to the right. 
 # 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
 # 10. Copy one array to another manually. 
