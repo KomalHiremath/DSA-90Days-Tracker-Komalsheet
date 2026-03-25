@@ -122,39 +122,73 @@
     
 
 # 7. Rotate an array by one position to the left. 
-def elem(n):
-    arr = []
-    for i in range(n):
-        arr.append(int(input()))
-    return arr
 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def rotate(arr):
+#     n = len(arr)
+#     temp = arr[0]
+#     # shift to the left
+#     for i in range(1, n):
+#         arr[i-1] = arr[i]
+#     arr[n-1] = temp
+#     return arr
+    
+# n = int(input("Enter the size of array:"))
+# arr = elem(n)
+# print(rotate(arr))
+
+# # 8. Rotate an array by k position to the left. 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def reverse(arr, start, end):
+#     while start<end: 
+#         arr[start], arr[end] = arr[end], arr[start]
+#         start += 1
+#         end -= 1
+    
 # def rotate(arr, k):
 #     n = len(arr)
 #     k = k%n
-#     arr1 = arr[0:k]
-#     arr2 = arr[k:]
     
-#     arr1.reverse()
-#     arr2.reverse()
-    
-#     result = arr1[:] + arr2[:]
-#     arr[:] = result
-#     arr.reverse()
-#     return arr
+# # reverse(arr, start_index, end_index): end_index is INCLUDED 
+# # ex: [2, 3, 4, 1] -->(arr, 1, 3) = [3, 4, 1]
 
-def rotate(arr):
-    n = len(arr)
-    temp = arr[0]
-    # shift to the left
-    for i in range(1, n):
-        arr[i-1] = arr[i]
-    arr[n-1] = temp
-    return arr
+#     reverse(arr, 0, k-1) # Step 1: reverse first k elements
+#     reverse(arr, k, n-1)  # Step 2: reverse remaining n-k elements
+#     reverse(arr, 0, n-1)    # Step 3: reverse entire array
+#     return arr
     
-n = int(input("Enter the size of array:"))
-arr = elem(n)
+# n = int(input("Enter the size of array:"))
+# arr = elem(n)
 # k= int(input("Enter the no. of position to rotate:"))
-print(rotate(arr))
+# print(rotate(arr, k))
+
+# # EXAMPLE
+# # arr = [1, 2, 3, 4, 5] # k = 2 
+# # reverse(arr, 0, k-1) = 2 1 3 4 5
+# # reverse(arr, k, n-1) = 2 1 5 4 3
+# # reverse(arr, 0, n-1) = 3 4 5 1 2
+
+# #Brute force
+# #     arr1 = arr[0:k]
+# #     arr2 = arr[k:]
+    
+# #     arr1.reverse()
+# #     arr2.reverse()
+    
+# #     result = arr1[:] + arr2[:]
+# #     arr[:] = result
+# #     arr.reverse()
+# #     return arr
     
     
 # 8. Rotate an array by one position to the right. 
