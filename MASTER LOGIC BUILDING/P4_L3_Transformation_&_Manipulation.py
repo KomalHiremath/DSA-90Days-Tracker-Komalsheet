@@ -191,25 +191,61 @@
 # #     return arr
     
     
-# 8. Rotate an array by one position to the right. 
+## 8. Rotate an array by one position to the right. 
+# GFG: https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def rotateR(arr):
+#     n = len(arr)
+#     temp = arr[n-1]
+#     for i in range(n-1, 0, -1):
+#         arr[i] = arr[i-1]
+#     arr[0] = temp
+#     return arr
+
+# n = int(input("Enter the len of arr: "))
+# arr = elem(n)
+# print(rotateR(arr))
+        
+# # 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
+# def elem(n):
+#     arr = []
+#     for i in range(n):
+#         arr.append(int(input()))
+#     return arr
+
+# def swap_elements(arr):
+#     l = 0
+#     r = 1
+#     while r < len(arr):
+#         arr[l], arr[r] = arr[r], arr[l]  
+#         l += 2
+#         r+=2        
+#     return arr
+
+# n = int(input("Enter the array size: "))
+# arr = elem(n)
+# print(swap_elements(arr))  
+           
+# 10. Copy one array to another manually. 
 def elem(n):
     arr = []
     for i in range(n):
         arr.append(int(input()))
     return arr
 
-def rotateR(arr):
-    n = len(arr)
-    temp = arr[n-1]
-    for i in range(n-1, 0, -1):
-        arr[i] = arr[i-1]
-    arr[0] = temp
-    return arr
+def copy_elem(arr):
+    arr1=[]
+    for i in range(len(arr)):
+        arr1.append(arr[i])
+    return arr1
 
-n = int(input("Enter the len of arr: "))
+n = int(input("Size of Array: "))
 arr = elem(n)
-print(rotateR(arr))
-        
-# 9. Swap alternate elements (1st ↔ 2nd, 3rd ↔ 4th, etc.). 
-# 10. Copy one array to another manually. 
+print(copy_elem(arr))
+    
 
