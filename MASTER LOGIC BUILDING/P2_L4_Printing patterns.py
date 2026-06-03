@@ -59,6 +59,7 @@ n = int(input("Enter the num of stars:"))
 #   &&&  
 #  &&&&& 
 # &&&&&&&
+
 # for i in range(1, n+1):
 #     print(" " * (n-i) + "&" * (i+(i-1)) + " " * (n-i))
 
@@ -67,12 +68,70 @@ n = int(input("Enter the num of stars:"))
 # --* *
 # -* * *
 # * * * *
+
 # for i in range(1, n+1):
 #     print("-" * (n-i) + "* " * (i-1) + "*")
 
+# 11. Print Numbers in an Increasing Sequence (1, 12, 123, 1234, 12345)
+# 1
+# 12
+# 123
+# 1234
 
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(j, end="")
+#     print()
 
+# 12. Print Repeated Numbers per Row (Same Number Repeated)  
+# 1
+# 22
+# 333
+# 4444
+# 55555
 
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(i, end="")
+#     print()
 
+# 13.
+
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 10 
+# 11 12 13 14 15 
+
+# num =1
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(num, end=" ")
+#         num += 1
+#     print()
+        
+# 14. 
+
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 0 
+# 1 2 3 4 5 
+# 6 7 8 9 0 1 
+# 2 3 4 5 6 7 8 
+# 9 0 1 2 3 4 5 6 
+
+# num = 1
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(num%10, end = " ")
+#         num=num+1
+#     print()
+
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        val = (i+j) % 2
+        print(val, end =" ")
+    print()
     
 
