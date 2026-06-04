@@ -128,10 +128,89 @@ n = int(input("Enter the num of stars:"))
 #         num=num+1
 #     print()
 
-for i in range(1, n+1):
-    for j in range(1, i+1):
-        val = (i+j) % 2
-        print(val, end =" ")
-    print()
+# 15. 
+
+# 0 
+# 1 0 
+# 0 1 0 
+# 1 0 1 0 
+# 0 1 0 1 0 
+
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         val = (i+j) % 2
+#         print(val, end =" ")
+#     print()
+
+# 16.
+
+# A 
+# B C 
+# D E F 
+# G H I J 
+# K L M N O 
+
+# ch = ord('A')
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(chr(ch), end=" ")
+#         ch += 1
+#     print()
+
+# 17. 
+# A 
+# B B 
+# C C C 
+# D D D D 
+# E E E E E 
+
+# ch = ord('A')
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(chr(ch), end=" ")
+#     ch += 1
+#     print()
+
+# 18. 
+# A 
+# A B 
+# A B C 
+# A B C D 
+# A B C D E 
+
+# for i in range(1, n+1):
+#     ch = ord('A')
+#     for j in range(1, i+1):
+#         print(chr(ch), end= " ")
+#         ch += 1
+#     print()
+
+# 19.
+# ----A 
+# ---B C D 
+# --E F G H I 
+# -J K L M N O P 
+# Q R S T U V W X Y
+
+# ch = ord('A')
+# for i in range(1, n+1):
+#     print("-" * (n-i), end ="")
+#     for j in range(1, i*2):  # -- this line ---
+#         print(chr(ch), end = " ")
+#         ch += 1
+#     print()
     
+# ----A 
+# ---B C 
+# --D E F 
+# -G H I J 
+# K L M N O 
+
+# ch = ord('A')
+# for i in range(1, n+1):
+#     print("-" * (n-i), end ="")
+#     for j in range(1, i+1):  # -- this line ---
+#         print(chr(ch), end = " ")
+#         ch += 1
+#     print()  
 
