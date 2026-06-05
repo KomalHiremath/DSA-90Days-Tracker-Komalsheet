@@ -241,6 +241,35 @@ n = int(input("Enter the num of stars:"))
 #         print(j, end="")
         
 #     # BACKWARD 
-#     for j in range(i, 1, -1):
-#         print(j-1, end="")   
-#     print()
+    # for j in range(i, 1, -1):
+    #     print(j-1, end="")   
+    # print()
+    
+# 22. 
+# ----5
+# ---545
+# --54345
+# -5432345
+# 543212345
+
+# ----5
+# ---54
+# --543
+# -5432
+# 54321
+for i in range(1, n+1):
+    print("-"*(n-i), end="")
+    for j in range(5, 5-i, -1):
+        print(j, end="")
+        
+# BLANK      
+# 5
+# 45
+# 345
+# 2345 
+    for j in range(6-i, 5):
+        print(j+1, end="")
+    print()
+    
+        
+        
