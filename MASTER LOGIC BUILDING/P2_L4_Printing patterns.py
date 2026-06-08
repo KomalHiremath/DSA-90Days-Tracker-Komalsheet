@@ -257,19 +257,88 @@ n = int(input("Enter the num of stars:"))
 # --543
 # -5432
 # 54321
-for i in range(1, n+1):
-    print("-"*(n-i), end="")
-    for j in range(5, 5-i, -1):
-        print(j, end="")
+# for i in range(1, n+1):
+#     print("-"*(n-i), end="")
+#     for j in range(5, 5-i, -1):
+#         print(j, end="")
         
 # BLANK      
 # 5
 # 45
 # 345
 # 2345 
-    for j in range(6-i, 5):
-        print(j+1, end="")
-    print()
+    # for j in range(6-i, 5):
+    #     print(j+1, end="")
+    # print()
     
-        
-        
+# 23.
+
+# *
+# **
+# ***
+# ****
+# *****
+# ****
+# ***
+# **
+# *
+      
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print("*", end="")
+#     print() 
+
+#       INVERTED
+# for i in range(1, n+1):
+#     for j in range(1, (n-i)+1):
+#         print("*", end="")  
+#     print() 
+    
+# 24. 
+
+# *
+# **
+# ***
+# ****
+# *****
+# ****
+# ***
+# **
+# *
+
+# for i in range(1, n+1):
+#     for j in range(1,i+1):
+#         print("*", end="")
+#     print()
+    
+#       INVERTED
+# for i in range(1, n+1):
+#     for j in range(1, (n-i)+2):
+#         print("*", end="")
+#     print()
+
+
+23.
+
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+    
+# for i in range(1, n+1):
+#     print(" " * ((n-i)), end="")
+#     for j in range(1, i*2):  
+#         print("*", end="")
+#     print()
+
+# #      INVERTED
+# for i in range(1, n+1):
+#     print(" " * i, end="" )
+#     for j in range(1, ((n*2)-(i*2))):
+#         print("*", end="" )
+#     print()
