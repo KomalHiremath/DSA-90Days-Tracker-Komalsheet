@@ -318,7 +318,7 @@ n = int(input("Enter the num of stars:"))
 #     print()
 
 
-23.
+25.
 
 #     *
 #    ***
@@ -342,3 +342,4 @@ n = int(input("Enter the num of stars:"))
 #     for j in range(1, ((n*2)-(i*2))):
 #         print("*", end="" )
 #     print()
+
